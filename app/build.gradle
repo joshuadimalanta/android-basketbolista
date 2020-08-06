@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+// Realm Initialization 2
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 30
