@@ -40,21 +40,23 @@ public class MainActivity7 extends AppCompatActivity {
 
     @AfterViews
     public void init(){
-
+        // + initialize fields
+        // + make fields unclickable
     }
 
     @Click(R.id.buttonToAdjust)
     public void toAdjustClick(View view){
-
+        MainActivity8_.intent(this).start();
     }
 
     @Click(R.id.buttonToProfile1)
     public void toProfile1Click(View view){
-
+        //  MainActivity6_.intent(this).start();
+        finish();
     }
 
     @Click(R.id.logoToHome1)
     public void toHome1Click(View view){
-
+        MainActivity5_.intent(this).start();
     }
 }

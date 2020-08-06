@@ -68,21 +68,24 @@ public class MainActivity8 extends AppCompatActivity {
 
     @AfterViews
     public void init(){
-
+        // + initialize fields
+        // + make fields unclickable
     }
 
     @Click(R.id.buttonSaveStats)
     public void saveStatsClick(View view){
-
+        // + save changes
+        MainActivity7_.intent(this).start();
     }
 
     @Click(R.id.buttonToStats1)
     public void toStats1Click(View view){
-
+        //  MainActivity7_.intent(this).start();
+        finish();
     }
 
     @Click(R.id.logoToHome2)
     public void toHome2Click(View view){
-
+        MainActivity5_.intent(this).start();
     }
 }

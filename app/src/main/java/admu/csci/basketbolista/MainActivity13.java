@@ -31,11 +31,13 @@ public class MainActivity13 extends AppCompatActivity {
 
     @Click(R.id.buttonCompare)
     public void compareClick(View view){
-
+        // + verify if comparable
+        // + sharedpref to compare, init there
+        MainActivity5_.intent(this).start();
     }
 
-    @Click(R.id.logoToHome4)
-    public void toHome4Click(View view){
-
+    @Click(R.id.logoToHome6)
+    public void toHome6Click(View view){
+        MainActivity5_.intent(this).start();
     }
 }

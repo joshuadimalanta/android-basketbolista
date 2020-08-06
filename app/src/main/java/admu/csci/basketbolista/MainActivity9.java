@@ -42,26 +42,30 @@ public class MainActivity9 extends AppCompatActivity {
 
     @AfterViews
     public void init(){
-
+        // + initialize fields
+        // + make fields unclickable
     }
 
     @Click(R.id.buttonSaveProfile)
     public void saveProfileClick(View view){
-
+        // + save changes
+        MainActivity6_.intent(this).start();
     }
 
     @Click(R.id.buttonToProfile2)
     public void toProfile2Click(View view){
-
+        //  MainActivity6_.intent(this).start();
+        finish();
     }
 
     @Click(R.id.buttonSelectPicture)
     public void selectPictureClick(View view){
-
+        // code for camera
+        // fix camera
     }
 
     @Click(R.id.logoToHome3)
     public void toHome3Click(View view){
-
+        MainActivity5_.intent(this).start();
     }
 }

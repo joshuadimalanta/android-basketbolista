@@ -32,16 +32,17 @@ public class MainActivity5 extends AppCompatActivity {
 
     @Click(R.id.buttonToProfile)
     public void toProfileClick(View view){
-
+        // + sharedpref current user's UUID tas send sa mainactivity6 initialization
+        MainActivity6_.intent(this).start();
     }
 
     @Click(R.id.buttonToSearch)
     public void toSearchClick(View view){
-
+        MainActivity11_.intent(this).start();
     }
 
     @Click(R.id.buttonToCompare)
     public void toCompareClick(View view){
-
+        MainActivity13_.intent(this).start();
     }
 }

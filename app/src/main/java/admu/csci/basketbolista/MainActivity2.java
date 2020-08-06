@@ -20,6 +20,8 @@ public class MainActivity2 extends AppCompatActivity {
     EditText registerUsername;
     @ViewById(R.id.registerPassword)
     EditText registerPassword;
+    @ViewById(R.id.confirmPassword)
+    EditText confirmPassword;
     @ViewById(R.id.buttonRegister)
     Button buttonRegister;
     @ViewById(R.id.buttonCancel)
@@ -32,11 +34,12 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Click(R.id.buttonRegister)
     public void registerClick(View view){
-
+        // + availability check
+        // + password check
     }
 
     @Click(R.id.buttonCancel)
     public void cancelClick(View view){
-
+        finish();
     }
 }

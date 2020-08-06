@@ -40,17 +40,18 @@ public class MainActivity6 extends AppCompatActivity {
 
     @AfterViews
     public void init(){
-
+        // + initialize fields
+        // + make fields unclickable
     }
 
     @Click(R.id.buttonToStats)
     public void toStatsClick(View view){
-
+        MainActivity7_.intent(this).start();
     }
 
     @Click(R.id.buttonToEdit)
     public void toEditClick(View view){
-
+        MainActivity9_.intent(this).start();
     }
 
     @Click(R.id.logoToHome)

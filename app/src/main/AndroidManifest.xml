@@ -20,7 +20,7 @@
         <activity android:name=".MainActivity7_" />
         <activity android:name=".MainActivity6_" />
         <activity android:name=".MainActivity5_" />
-        <activity android:name=".MainActivity4" />
+        <activity android:name=".MainActivity4_" />
         <activity android:name=".MainActivity3_" />
         <activity android:name=".MainActivity2_" />
         <activity android:name=".MainActivity_">

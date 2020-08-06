@@ -34,17 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Click(R.id.buttonLogin)
     public void loginClick(View view){
-
+        // + credentials check
+        MainActivity5_.intent(this).start();
     }
 
     @Click(R.id.buttonToRegister)
     public void toRegisterClick(View view){
-
+        MainActivity2_.intent(this).start();
     }
 
     @Click(R.id.buttonToAdmin)
     public void toAdminClick(View view){
-
+        MainActivity3_.intent(this).start();
     }
 
 

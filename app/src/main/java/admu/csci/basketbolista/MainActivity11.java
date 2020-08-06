@@ -31,11 +31,13 @@ public class MainActivity11 extends AppCompatActivity {
 
     @Click(R.id.buttonSearch)
     public void searchClick(View view){
-
+        // + verify if searchable
+        // + get uuid of searched and init there
+        MainActivity12_.intent(this).start();
     }
 
     @Click(R.id.logoToHome4)
     public void toHome4Click(View view){
-
+        MainActivity5_.intent(this).start();
     }
 }

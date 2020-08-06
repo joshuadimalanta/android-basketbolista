@@ -3,10 +3,12 @@ package admu.csci.basketbolista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -62,6 +64,11 @@ public class MainActivity14 extends AppCompatActivity {
 
     @AfterViews
     public void init(){
+        // get playerinfo of user and opponent
+    }
 
+    @Click(R.id.logoToHome7)
+    public void toHome7Click(View view){
+        MainActivity5_.intent(this).start();
     }
 }

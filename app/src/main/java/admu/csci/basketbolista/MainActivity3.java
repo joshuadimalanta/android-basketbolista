@@ -32,11 +32,12 @@ public class MainActivity3 extends AppCompatActivity {
 
     @Click(R.id.buttonAdminLogin)
     public void adminLoginClick(View view){
-
+        // + credentials check
+        MainActivity4_.intent(this).start();
     }
 
     @Click(R.id.buttonCancel)
     public void cancelClick(View view){
-
+        finish();
     }
 }
