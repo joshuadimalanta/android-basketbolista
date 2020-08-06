@@ -3,6 +3,7 @@ package admu.csci.basketbolista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @AfterViews
     public void init(){
-
+        // + clear login when logout is pressed
     }
 
     @Click(R.id.buttonLogin)

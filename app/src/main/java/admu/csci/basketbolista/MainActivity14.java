@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -20,34 +21,34 @@ public class MainActivity14 extends AppCompatActivity {
     ImageView logoToHome7;
     // user
     @ViewById(R.id.myName)
-    EditText myName;
+    TextView myName;
     @ViewById(R.id.myPoints)
-    EditText myPoints;
+    TextView myPoints;
     @ViewById(R.id.myAssists)
-    EditText myAssists;
+    TextView myAssists;
     @ViewById(R.id.myRebounds)
-    EditText myRebounds;
+    TextView myRebounds;
     @ViewById(R.id.myBlocks)
-    EditText myBlocks;
+    TextView myBlocks;
     @ViewById(R.id.mySteals)
-    EditText mySteals;
+    TextView mySteals;
     @ViewById(R.id.myWins)
-    EditText myWins;
+    TextView myWins;
     // compared to
     @ViewById(R.id.comparedName)
-    EditText comparedName;
+    TextView comparedName;
     @ViewById(R.id.comparedPoints)
-    EditText comparedPoints;
+    TextView comparedPoints;
     @ViewById(R.id.comparedAssists)
-    EditText comparedAssists;
+    TextView comparedAssists;
     @ViewById(R.id.comparedRebounds)
-    EditText comparedRebounds;
+    TextView comparedRebounds;
     @ViewById(R.id.comparedBlocks)
-    EditText comparedBlocks;
+    TextView comparedBlocks;
     @ViewById(R.id.comparedSteals)
-    EditText comparedSteals;
+    TextView comparedSteals;
     @ViewById(R.id.comparedWins)
-    EditText comparedWins;
+    TextView comparedWins;
     // indicators
     @ViewById(R.id.indicatorPoints)
     ImageView indicatorPoints;

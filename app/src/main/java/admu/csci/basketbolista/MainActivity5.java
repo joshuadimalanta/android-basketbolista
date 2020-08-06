@@ -24,6 +24,8 @@ public class MainActivity5 extends AppCompatActivity {
     Button buttonToSearch;
     @ViewById(R.id.buttonToCompare)
     Button buttonToCompare;
+    @ViewById(R.id.buttonLogout)
+    Button buttonLogout;
 
     @AfterViews
     public void init(){
@@ -44,5 +46,10 @@ public class MainActivity5 extends AppCompatActivity {
     @Click(R.id.buttonToCompare)
     public void toCompareClick(View view){
         MainActivity13_.intent(this).start();
+    }
+
+    @Click(R.id.buttonLogout)
+    public void logoutClick(View view){
+        MainActivity_.intent(this).start();
     }
 }

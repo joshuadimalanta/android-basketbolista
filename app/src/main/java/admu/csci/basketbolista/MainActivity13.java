@@ -3,6 +3,7 @@ package admu.csci.basketbolista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +34,8 @@ public class MainActivity13 extends AppCompatActivity {
     public void compareClick(View view){
         // + verify if comparable
         // + sharedpref to compare, init there
-        MainActivity5_.intent(this).start();
+        Log d;
+        MainActivity14_.intent(this).start();
     }
 
     @Click(R.id.logoToHome6)

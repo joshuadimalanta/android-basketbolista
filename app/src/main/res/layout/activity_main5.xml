@@ -39,16 +39,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-        <TextView
+        <EditText
             android:id="@+id/displayUsername"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Username"
-            android:textSize="18sp" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonLogout"
             android:layout_width="6dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
