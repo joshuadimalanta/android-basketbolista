@@ -77,18 +77,18 @@ public class MainActivity2 extends AppCompatActivity {
                     PlayerInfo newPlayerInfo = new PlayerInfo();
                     newPlayerInfo.setOwnerid(uuidToOwnerID.getUuid()); // COPYING THE UUID TO OWNERID
 //                  newPlayerInfo.setProfilepicture(PROFILE PICTURE PATH WILL GO HERE);
-                    newPlayerInfo.setName(" :) ");
-                    newPlayerInfo.setHometown(" :) ");
-                    newPlayerInfo.setTeam(" :) ");
-                    newPlayerInfo.setAge(" :) ");
+                    newPlayerInfo.setName("defaultName");
+                    newPlayerInfo.setHometown("defaultHometown");
+                    newPlayerInfo.setTeam("defaultTeam");
+                    newPlayerInfo.setAge("0");
                     newPlayerInfo.setHeight("0");
-                    newPlayerInfo.setWeight("1");
-                    newPlayerInfo.setPoints("2");
-                    newPlayerInfo.setAssists("3");
-                    newPlayerInfo.setRebounds("4");
-                    newPlayerInfo.setBlocks("5");
-                    newPlayerInfo.setSteals("6");
-                    newPlayerInfo.setWins("7");
+                    newPlayerInfo.setWeight("0");
+                    newPlayerInfo.setPoints("0");
+                    newPlayerInfo.setAssists("0");
+                    newPlayerInfo.setRebounds("0");
+                    newPlayerInfo.setBlocks("0");
+                    newPlayerInfo.setSteals("0");
+                    newPlayerInfo.setWins("0");
                     try {
                         // good code
                         realm.beginTransaction();
