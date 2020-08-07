@@ -2,16 +2,20 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import io.realm.Realm;
 
 @EActivity(R.layout.activity_main7)
 public class MainActivity7 extends AppCompatActivity {
@@ -22,25 +26,39 @@ public class MainActivity7 extends AppCompatActivity {
     @ViewById(R.id.profilePicture1)
     ImageView profilePicture1;
     @ViewById(R.id.profilePoints)
-    EditText profilePoints;
+    TextView profilePoints;
     @ViewById(R.id.profileAssists)
-    EditText profileAssists;
+    TextView profileAssists;
     @ViewById(R.id.profileRebounds)
-    EditText profileRebounds;
+    TextView profileRebounds;
     @ViewById(R.id.profileBlocks)
-    EditText profileBlocks;
+    TextView profileBlocks;
     @ViewById(R.id.profileSteals)
-    EditText profileSteals;
+    TextView profileSteals;
     @ViewById(R.id.profileWins)
-    EditText profileWins;
+    TextView profileWins;
     @ViewById(R.id.buttonToAdjust)
     Button buttonToAdjust;
     @ViewById(R.id.buttonToProfile1)
     Button buttonToProfile1;
+    // Realm
+    Realm realm;
 
     @AfterViews
     public void init(){
-        // + initialize fields
+        // Realm
+        realm = Realm.getDefaultInstance();
+        // SharedPrefs
+        SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+        String uuid = prefsLogin.getString("uuid",null);
+        // initialize fields iwht PlayerInfo information
+        PlayerInfo player = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
+        profilePoints.setText(player.getPoints());
+        profileAssists.setText(player.getAssists());
+        profileRebounds.setText(player.getRebounds());
+        profileBlocks.setText(player.getBlocks());
+        profileSteals.setText(player.getSteals());
+        profileWins.setText(player.getWins());
         // + make fields unclickable
     }
 

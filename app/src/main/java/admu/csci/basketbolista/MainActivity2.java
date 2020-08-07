@@ -43,21 +43,18 @@ public class MainActivity2 extends AppCompatActivity {
     @Click(R.id.buttonRegister)
     public void registerClick(View view){
         if (registerUsername.getText().toString().equals("")) {
-            Toast toast1 = Toast.makeText(getApplicationContext(), "Name must not be blank", Toast.LENGTH_SHORT);
-            toast1.show();
+            Toast.makeText(getApplicationContext(), "Name must not be blank", Toast.LENGTH_SHORT).show();
         } else {
-            Log debuggg;
             // check if username has already been taken
             User result = realm.where(User.class).equalTo("username", registerUsername.getText().toString()).findFirst();
             if (result != null) {
                 // username is taken (results were not null)
-                Toast toast9 = Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT);
-                toast9.show();
+                Toast.makeText(getApplicationContext(), "User already exists", Toast.LENGTH_SHORT).show();
             } else {
                 // username is available (results were null)
                 if (registerPassword.getText().toString().equals(confirmPassword.getText().toString())) {
                     // right combination
-                    //saving
+                    // saving User RealmObject
                     User newUser = new User();
                     newUser.setUuid(UUID.randomUUID().toString());
                     newUser.setUsername(registerUsername.getText().toString());
@@ -66,22 +63,47 @@ public class MainActivity2 extends AppCompatActivity {
                     try {
                         // good code
                         realm.beginTransaction();
-                        realm.copyToRealmOrUpdate(newUser); //save
-                        count = realm.where(User.class).count(); //count how many saved
+                        realm.copyToRealmOrUpdate(newUser);
                         realm.commitTransaction();
-                        Toast toast7 = Toast.makeText(getApplicationContext(), "New user saved.  Total: " + count, Toast.LENGTH_SHORT);
-                        toast7.show();
+                        Toast.makeText(getApplicationContext(), "New user saved.", Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
                         // erroneous code
-                        Toast toast8 = Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT);
-                        toast8.show();
+                        Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                    // saving User PlayerInfo
+                    User uuidToOwnerID = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
+                    PlayerInfo newPlayerInfo = new PlayerInfo();
+                    newPlayerInfo.setOwnerid(uuidToOwnerID.getUuid()); // COPYING THE UUID TO OWNERID
+//                  newPlayerInfo.setProfilepicture(PROFILE PICTURE PATH WILL GO HERE);
+                    newPlayerInfo.setName(" :) ");
+                    newPlayerInfo.setHometown(" :) ");
+                    newPlayerInfo.setTeam(" :) ");
+                    newPlayerInfo.setAge(" :) ");
+                    newPlayerInfo.setHeight("0");
+                    newPlayerInfo.setWeight("1");
+                    newPlayerInfo.setPoints("2");
+                    newPlayerInfo.setAssists("3");
+                    newPlayerInfo.setRebounds("4");
+                    newPlayerInfo.setBlocks("5");
+                    newPlayerInfo.setSteals("6");
+                    newPlayerInfo.setWins("7");
+                    try {
+                        // good code
+                        realm.beginTransaction();
+                        realm.copyToRealmOrUpdate(newPlayerInfo);
+                        realm.commitTransaction();
+                    } catch (Exception e) {
+                        // erroneous code
+                        Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT).show();
                     }
                     //closing
                     finish();
+
                 } else {
                     // wrong
-                    Toast toast3 = Toast.makeText(getApplicationContext(), "Confirm password does not match", Toast.LENGTH_SHORT);
-                    toast3.show();
+                    Toast.makeText(getApplicationContext(), "Confirm password does not match", Toast.LENGTH_SHORT).show();
                 }
             }
         }

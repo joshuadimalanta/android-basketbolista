@@ -1,5 +1,7 @@
 package admu.csci.basketbolista;
 
+import android.media.Image;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -51,62 +53,80 @@ public class PlayerInfo extends RealmObject {
     public void setTeam(String team) {
         this.team = team;
     }
+
     public String getAge() {
         return age;
     }
+
     public void setAge(String age) {
         this.age = age;
     }
+
     public String getHeight() {
         return height;
     }
+
     public void setHeight(String height) {
         this.height = height;
     }
+
     public String getWeight() {
         return weight;
     }
+
     public void setWeight(String weight) {
         this.weight = weight;
     }
+
     public String getPoints() {
         return points;
     }
+
     public void setPoints(String points) {
         this.points = points;
     }
+
     public String getAssists() {
         return assists;
     }
+
     public void setAssists(String assists) {
         this.assists = assists;
     }
+
     public String getRebounds() {
         return rebounds;
     }
+
     public void setRebounds(String rebounds) {
         this.rebounds = rebounds;
     }
+
     public String getBlocks() {
         return blocks;
     }
+
     public void setBlocks(String blocks) {
         this.blocks = blocks;
     }
+
     public String getSteals() {
         return steals;
     }
+
     public void setSteals(String steals) {
         this.steals = steals;
     }
+
     public String getWins() {
         return wins;
     }
+
     public void setWins(String wins) {
         this.wins = wins;
     }
+// generate > toString
 
-    // generate > toString
     @Override
     public String toString() {
         return "PlayerInfo{" +
