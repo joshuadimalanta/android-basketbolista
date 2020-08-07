@@ -20,26 +20,29 @@
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
         android:gravity="center"
         android:text="Edit Profile"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logoToHome3"
+        app:layout_constraintVertical_bias="0.01999998" />
 
     <ImageView
         android:id="@+id/logoToHome3"
         android:layout_width="189dp"
         android:layout_height="74dp"
-        android:layout_marginTop="60dp"
         android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
         app:srcCompat="@drawable/basketbolista" />
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -172,11 +175,12 @@
         android:id="@+id/linearLayout3"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="110dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:layout_constraintVertical_bias="0.23000002">
 
         <Button
             android:id="@+id/buttonSaveProfile"
@@ -197,9 +201,11 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.07999998">
 
         <Button
             android:id="@+id/buttonSelectPicture"

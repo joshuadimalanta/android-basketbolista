@@ -2,6 +2,7 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,8 @@ public class MainActivity9 extends AppCompatActivity {
     public void selectPictureClick(View view){
         // code for camera
         // fix camera
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        startActivity(intent);
     }
 
     @Click(R.id.logoToHome3)
