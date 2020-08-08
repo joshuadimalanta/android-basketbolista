@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="admu.csci.basketbolista">
-
     <!-- NEW: application permissions -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,20 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- NEW: the file authority is found in the res/values/strings.xml
-        this MUST match your package name in the <manifest> tag -->
+        <!--
+         NEW: the file authority is found in the res/values/strings.xml
+        this MUST match your package name in the <manifest> tag
+        -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="@string/fileAuthority"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <!-- there must be a res/xml/file_provider_path.xml or this will fail -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_path" />
         </provider>
 
-        <activity android:name=".MainActivity14_"></activity>
+        <activity android:name=".MainActivity15_"></activity>
+        <activity android:name=".MainActivity14_" />
         <activity android:name=".MainActivity13_" />
         <activity android:name=".MainActivity12_" />
         <activity android:name=".MainActivity11_" />
