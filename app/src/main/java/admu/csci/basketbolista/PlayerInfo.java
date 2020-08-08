@@ -8,7 +8,8 @@ import io.realm.annotations.PrimaryKey;
 public class PlayerInfo extends RealmObject {
     @PrimaryKey
     private String ownerid;
-    private String profilepicture;
+    private byte[] profilepicture;
+//    private String profilepicture;
     private String name;
     private String hometown;
     private String team;
@@ -29,12 +30,15 @@ public class PlayerInfo extends RealmObject {
     public void setOwnerid(String ownerid) {
         this.ownerid = ownerid;
     }
-    public String getProfilepicture() {
+
+    public byte[] getProfilepicture() {
         return profilepicture;
     }
-    public void setProfilepicture(String profilepicture) {
+
+    public void setProfilepicture(byte[] profilepicture) {
         this.profilepicture = profilepicture;
     }
+
     public String getName() {
         return name;
     }
@@ -131,7 +135,6 @@ public class PlayerInfo extends RealmObject {
     public String toString() {
         return "PlayerInfo{" +
                 "ownerid='" + ownerid + '\'' +
-                ", profilepicture='" + profilepicture + '\'' +
                 ", name='" + name + '\'' +
                 ", hometown='" + hometown + '\'' +
                 ", team='" + team + '\'' +

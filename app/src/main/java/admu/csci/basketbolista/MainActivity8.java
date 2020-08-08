@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
@@ -27,44 +28,45 @@ public class MainActivity8 extends AppCompatActivity {
     @ViewById(R.id.buttonPointsMinus)
     Button buttonPointsMinus;
     @ViewById(R.id.editPoints)
-    EditText editPoints;
+    TextView editPoints;
     @ViewById(R.id.buttonPointsAdd)
     Button buttonPointsAdd;
     // assists
     @ViewById(R.id.buttonAssistsMinus)
     Button buttonAssistsMinus;
     @ViewById(R.id.editAssists)
-    EditText editAssists;
+    TextView editAssists;
     @ViewById(R.id.buttonAssistsAdd)
     Button buttonAssistsAdd;
     // rebounds
     @ViewById(R.id.buttonReboundsMinus)
     Button buttonReboundsMinus;
     @ViewById(R.id.editRebounds)
-    EditText editRebounds;
+    TextView editRebounds;
     @ViewById(R.id.buttonReboundsAdd)
     Button buttonReboundsAdd;
     // blocks
     @ViewById(R.id.buttonBlocksMinus)
     Button buttonBlocksMinus;
     @ViewById(R.id.editBlocks)
-    EditText editBlocks;
+    TextView editBlocks;
     @ViewById(R.id.buttonBlocksAdd)
     Button buttonBlocksAdd;
     // steals
     @ViewById(R.id.buttonStealsMinus)
     Button buttonStealsMinus;
     @ViewById(R.id.editSteals)
-    EditText editSteals;
+    TextView editSteals;
     @ViewById(R.id.buttonStealsAdd)
     Button buttonStealsAdd;
     // wins
     @ViewById(R.id.buttonWinsMinus)
     Button buttonWinsMinus;
     @ViewById(R.id.editWins)
-    EditText editWins;
+    TextView editWins;
     @ViewById(R.id.buttonWinsAdd)
     Button buttonWinsAdd;
+    // others
     @ViewById(R.id.buttonSaveStats)
     Button buttonSaveStats;
     @ViewById(R.id.buttonToStats1)
@@ -82,13 +84,11 @@ public class MainActivity8 extends AppCompatActivity {
         // initialize fields iwht PlayerInfo information
         PlayerInfo player = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
         editPoints.setText(player.getPoints());
-        editPoints.setEnabled(false);
         editAssists.setText(player.getAssists());
         editRebounds.setText(player.getRebounds());
         editBlocks.setText(player.getBlocks());
         editSteals.setText(player.getSteals());
         editWins.setText(player.getWins());
-        // + make fields unclickable
     }
 
     @Click(R.id.buttonPointsMinus)
@@ -148,7 +148,7 @@ public class MainActivity8 extends AppCompatActivity {
 
     @Click(R.id.buttonSaveStats)
     public void saveStatsClick(View view){
-        // + save changes
+        // save changes
         if(Integer.parseInt(editPoints.getText().toString()) >= 0 && Integer.parseInt(editAssists.getText().toString()) >= 0
                 && Integer.parseInt(editRebounds.getText().toString()) >= 0 && Integer.parseInt(editBlocks.getText().toString()) >= 0
                 && Integer.parseInt(editSteals.getText().toString()) >= 0 && Integer.parseInt(editWins.getText().toString()) >= 0){

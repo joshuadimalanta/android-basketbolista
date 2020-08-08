@@ -39,4 +39,11 @@ dependencies {
 
     // Realm Adapter
     implementation 'io.realm:android-adapters:3.1.0'
+
+    // Camera
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Permissions
+    implementation 'com.karumi:dexter:6.2.1'
 }

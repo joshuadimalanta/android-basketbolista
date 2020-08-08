@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Basketbolista</string>
+    <!-- THIS MUST MATCH YOUR PACKAGE NAME OR ELSE CAMERA WILL NOT SAVE IMAGE-->
+    <string name="fileAuthority">admu.csci.basketbolista</string>
 </resources>

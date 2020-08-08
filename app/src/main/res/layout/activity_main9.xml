@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/defaultpicture"
+        tools:srcCompat="@drawable/defaultpicture" />
 
     <TextView
         android:id="@+id/textView28"
@@ -143,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="number|numberDecimal"
                     android:text="0" />
             </LinearLayout>
 
@@ -164,7 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="number|numberDecimal"
                     android:text="0" />
 
             </LinearLayout>

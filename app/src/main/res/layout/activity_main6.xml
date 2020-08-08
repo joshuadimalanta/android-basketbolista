@@ -41,7 +41,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.01999998"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/defaultpicture"
+        tools:srcCompat="@drawable/defaultpicture" />
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -61,14 +62,12 @@
             android:text="Name"
             android:textSize="12sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/profileName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:textSize="14sp" />
+            android:text="TextView"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -77,14 +76,12 @@
             android:text="Hometown"
             android:textSize="12sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/profileHometown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Hometown"
-            android:textSize="14sp" />
+            android:text="TextView"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -93,14 +90,12 @@
             android:text="Team"
             android:textSize="12sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/profileTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Team"
-            android:textSize="14sp" />
+            android:text="TextView"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,13 +114,13 @@
                     android:text="Age"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/profileAge"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Age" />
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -137,16 +132,16 @@
                     android:id="@+id/textView19"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Height"
+                    android:text="Height (ft)"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/profileHeight"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Height" />
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -158,16 +153,16 @@
                     android:id="@+id/textView20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Weight"
+                    android:text="Weight (lbs)"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/profileWeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Weight" />
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
         </LinearLayout>
 

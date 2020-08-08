@@ -42,8 +42,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Click(R.id.buttonRegister)
     public void registerClick(View view){
-        if (registerUsername.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Name must not be blank", Toast.LENGTH_SHORT).show();
+        if (registerUsername.getText().toString().equals("") || registerPassword.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(), "Fields must not be blank", Toast.LENGTH_SHORT).show();
         } else {
             // check if username has already been taken
             User result = realm.where(User.class).equalTo("username", registerUsername.getText().toString()).findFirst();
@@ -76,7 +76,7 @@ public class MainActivity2 extends AppCompatActivity {
                     User uuidToOwnerID = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
                     PlayerInfo newPlayerInfo = new PlayerInfo();
                     newPlayerInfo.setOwnerid(uuidToOwnerID.getUuid()); // COPYING THE UUID TO OWNERID
-//                  newPlayerInfo.setProfilepicture(PROFILE PICTURE PATH WILL GO HERE);
+//                    newPlayerInfo.setProfilepicture();
                     newPlayerInfo.setName("defaultName");
                     newPlayerInfo.setHometown("defaultHometown");
                     newPlayerInfo.setTeam("defaultTeam");

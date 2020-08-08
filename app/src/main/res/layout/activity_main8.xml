@@ -63,14 +63,15 @@
                     android:text="Points"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editPoints"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
@@ -105,14 +106,15 @@
                     android:text="Assists"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editAssists"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
@@ -147,14 +149,15 @@
                     android:text="Rebounds"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editRebounds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
@@ -192,14 +195,15 @@
                     android:text="Blocks"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editBlocks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
@@ -236,14 +240,15 @@
                     android:text="Steals"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editSteals"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
@@ -280,14 +285,15 @@
                     android:text="Wins"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editWins"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:gravity="center"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:padding="8sp"
+                    android:text="0"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <Button
