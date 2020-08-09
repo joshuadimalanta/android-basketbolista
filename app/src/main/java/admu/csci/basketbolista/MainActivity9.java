@@ -64,6 +64,8 @@ public class MainActivity9 extends AppCompatActivity {
     EditText editHeight;
     @ViewById(R.id.editWeight)
     EditText editWeight;
+    @ViewById(R.id.editVideoID)
+    EditText editVideoID;
     @ViewById(R.id.buttonSaveProfile)
     Button buttonSaveProfile;
     @ViewById(R.id.buttonToProfile2)
@@ -154,7 +156,29 @@ public class MainActivity9 extends AppCompatActivity {
             toEdit.setWeight(editWeight.getText().toString());
 
             realm.commitTransaction();
-            Toast.makeText(getApplicationContext(), "Stats adjusted.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Profile updated", Toast.LENGTH_SHORT).show();
+        }
+
+
+        // VIDEO
+
+        if (editVideoID.getText().toString().equals("")) {
+            realm.beginTransaction();
+            SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+            String uuid = prefsLogin.getString("uuid",null);
+            PlayerInfo toEdit = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
+            toEdit.setVideoid("Tn70NxIMk2Q"); //default video if left blank
+            realm.commitTransaction();
+            //closing
+            finish();
+            MainActivity6_.intent(this).start();
+        }else{
+            realm.beginTransaction();
+            SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+            String uuid = prefsLogin.getString("uuid",null);
+            PlayerInfo toEdit = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
+            toEdit.setVideoid(editVideoID.getText().toString()); //default video if left blank
+            realm.commitTransaction();
             //closing
             finish();
             MainActivity6_.intent(this).start();
@@ -235,6 +259,10 @@ public class MainActivity9 extends AppCompatActivity {
     }
     /////////////////////////////////////////     IMAGES      //////////////////////////////////////
 
-
+    @Override
+    public void onBackPressed() {
+        finish();
+        MainActivity6_.intent(this).start();
+    }
 
 }

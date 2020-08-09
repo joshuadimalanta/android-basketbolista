@@ -115,4 +115,10 @@ public class MainActivity7 extends AppCompatActivity {
                 .into(profilePicture1);           // where will the photo be placed
     }
     /////////////////////////////////////////     IMAGES      //////////////////////////////////////
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        MainActivity6_.intent(this).start();
+    }
 }

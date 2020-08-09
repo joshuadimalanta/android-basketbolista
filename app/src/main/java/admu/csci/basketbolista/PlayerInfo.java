@@ -9,7 +9,6 @@ public class PlayerInfo extends RealmObject {
     @PrimaryKey
     private String ownerid;
     private byte[] profilepicture;
-//    private String profilepicture;
     private String name;
     private String hometown;
     private String team;
@@ -22,6 +21,7 @@ public class PlayerInfo extends RealmObject {
     private String blocks;
     private String steals;
     private String wins;
+    private String videoid;
 
     // generate > getters and setters
     public String getOwnerid() {
@@ -126,6 +126,14 @@ public class PlayerInfo extends RealmObject {
         return wins;
     }
 
+    public String getVideoid() {
+        return videoid;
+    }
+
+    public void setVideoid(String videoid) {
+        this.videoid = videoid;
+    }
+
     public void setWins(String wins) {
         this.wins = wins;
     }
@@ -147,6 +155,7 @@ public class PlayerInfo extends RealmObject {
                 ", blocks='" + blocks + '\'' +
                 ", steals='" + steals + '\'' +
                 ", wins='" + wins + '\'' +
+                ", videoid='" + videoid + '\'' +
                 '}';
     }
 }

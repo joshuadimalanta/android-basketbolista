@@ -172,6 +172,7 @@ public class MainActivity8 extends AppCompatActivity {
             // may negative value
             Toast.makeText(getApplicationContext(), "Cannot save negative values.", Toast.LENGTH_SHORT).show();
         }
+
     }
 
     @Click(R.id.buttonToStats1)
@@ -182,5 +183,11 @@ public class MainActivity8 extends AppCompatActivity {
     @Click(R.id.logoToHome2)
     public void toHome2Click(View view){
         MainActivity5_.intent(this).start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        MainActivity7_.intent(this).start();
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
@@ -32,17 +33,17 @@ public class MainActivity12 extends AppCompatActivity {
     @ViewById(R.id.searchedProfilePicture)
     ImageView searchedProfilePicture;
     @ViewById(R.id.searchedName)
-    EditText searchedName;
+    TextView searchedName;
     @ViewById(R.id.searchedHometown)
-    EditText searchedHometown;
+    TextView searchedHometown;
     @ViewById(R.id.searchedTeam)
-    EditText searchedTeam;
+    TextView searchedTeam;
     @ViewById(R.id.searchedAge)
-    EditText searchedAge;
+    TextView searchedAge;
     @ViewById(R.id.searchedHeight)
-    EditText searchedHeight;
+    TextView searchedHeight;
     @ViewById(R.id.searchedWeight)
-    EditText searchedWeight;
+    TextView searchedWeight;
     // Realm
     Realm realm;
 

@@ -20,11 +20,12 @@
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="146dp"
         android:gravity="center"
         android:text="Search Result"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,61 +41,92 @@
         app:srcCompat="@drawable/basketbolista" />
 
     <LinearLayout
+        android:id="@+id/linearLayout8"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:background="@drawable/border"
         android:orientation="vertical"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchedProfilePicture">
+        app:layout_constraintTop_toBottomOf="@+id/searchedProfilePicture"
+        app:layout_constraintVertical_bias="0.07999998">
 
-        <TextView
-            android:id="@+id/textView42"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="12sp" />
+            android:background="@drawable/border_inside"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-        <EditText
-            android:id="@+id/searchedName"
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/searchedName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:textSize="14sp" />
+            android:background="@drawable/border_inside"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-        <TextView
-            android:id="@+id/textView43"
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hometown"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/searchedHometown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hometown"
-            android:textSize="12sp" />
+            android:background="@drawable/border_inside"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-        <EditText
-            android:id="@+id/searchedHometown"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Hometown"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Team"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/textView44"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team"
-            android:textSize="12sp" />
-
-        <EditText
-            android:id="@+id/searchedTeam"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Team"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/searchedTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,65 +136,78 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="@drawable/border_inside"
+                android:orientation="vertical"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/textView45"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Age"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/searchedAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="@drawable/border_inside"
+                android:orientation="vertical"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/textView46"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Height"
+                    android:gravity="center"
+                    android:text="Height (ft)"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/searchedHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:background="@drawable/border_inside"
+                android:orientation="vertical"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/textView47"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Weight"
+                    android:gravity="center"
+                    android:text="Weight (lbs)"
                     android:textSize="12sp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/searchedWeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="0" />
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="24sp" />
+
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

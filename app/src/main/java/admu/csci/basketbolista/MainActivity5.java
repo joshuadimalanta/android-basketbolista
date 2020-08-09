@@ -99,8 +99,9 @@ public class MainActivity5 extends AppCompatActivity {
 
     @Click(R.id.buttonToHighlights)
     public void highlightClick(View view){
-        Intent intent = new Intent(this, HighlightsScreen_.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, HighlightsScreen_.class);
+//        startActivity(intent);
+        MainActivity16_.intent(this).start();
     }
 
     @Override

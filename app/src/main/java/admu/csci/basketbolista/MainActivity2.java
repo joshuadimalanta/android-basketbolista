@@ -91,6 +91,7 @@ public class MainActivity2 extends AppCompatActivity {
                     newPlayerInfo.setBlocks("0");
                     newPlayerInfo.setSteals("0");
                     newPlayerInfo.setWins("0");
+                    newPlayerInfo.setVideoid("Tn70NxIMk2Q"); //default video nike
                     try {
                         // good code
                         realm.beginTransaction();

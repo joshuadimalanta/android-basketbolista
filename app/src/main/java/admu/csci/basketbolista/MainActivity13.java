@@ -61,7 +61,6 @@ public class MainActivity13 extends AppCompatActivity {
                 editorSearched.putString("uuid",compared.getUuid());
                 editorSearched.apply();
                 // go to result
-                finish();
                 MainActivity14_.intent(this).start();
             }
         } else {
@@ -72,6 +71,12 @@ public class MainActivity13 extends AppCompatActivity {
 
     @Click(R.id.logoToHome6)
     public void toHome6Click(View view){
+        MainActivity5_.intent(this).start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
         MainActivity5_.intent(this).start();
     }
 }

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,10 +9,38 @@
     android:orientation="vertical"
     tools:context=".HighlightsScreen">
 
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+    <ImageView
+        android:id="@+id/logoToHome9"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="60dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basketbolista" />
+
+    <TextView
+        android:id="@+id/textView54"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:videoId="b117a8_jALE"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Player Highlights"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:autoPlay="false"
-        app:showYouTubeButton="false"/>
+        app:showYouTubeButton="false" />
+
 </LinearLayout>

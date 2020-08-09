@@ -2,6 +2,7 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -118,4 +119,10 @@ public class MainActivity6 extends AppCompatActivity {
                 .into(profilePicture);           // where will the photo be placed
     }
     /////////////////////////////////////////     IMAGES      //////////////////////////////////////
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        MainActivity5_.intent(this).start();
+    }
 }

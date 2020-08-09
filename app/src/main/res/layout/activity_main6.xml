@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoToHome"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.017" />
 
     <ImageView
         android:id="@+id/logoToHome"
@@ -49,53 +49,88 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/border"
+        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePicture"
         app:layout_constraintVertical_bias="0.07999998">
 
-        <TextView
-            android:id="@+id/textView13"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textSize="12sp" />
+            android:background="@drawable/border_inside"
+            android:padding="5dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/profileName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hometown"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/profileHometown"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="20sp" />
+            android:background="@drawable/border_inside"
+            android:padding="5dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hometown"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/profileTeam"
+            <TextView
+                android:id="@+id/profileHometown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="20sp" />
+            android:background="@drawable/border_inside"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Team"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/profileTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,14 +138,17 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_inside"
+                android:padding="5dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView18"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Age"
                     android:textSize="12sp" />
 
@@ -118,20 +156,24 @@
                     android:id="@+id/profileAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="0"
                     android:textSize="24sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_inside"
+                android:padding="5dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView19"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Height (ft)"
                     android:textSize="12sp" />
 
@@ -139,20 +181,24 @@
                     android:id="@+id/profileHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="0"
                     android:textSize="24sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/border_inside"
+                android:padding="5dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Weight (lbs)"
                     android:textSize="12sp" />
 
@@ -160,6 +206,7 @@
                     android:id="@+id/profileWeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="0"
                     android:textSize="24sp" />
 

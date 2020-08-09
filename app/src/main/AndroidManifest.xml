@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyApp"
@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity16_"></activity>
         <!--
          NEW: the file authority is found in the res/values/strings.xml
         this MUST match your package name in the <manifest> tag
@@ -30,7 +31,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_path" />
         </provider>
-        <activity android:name=".HighlightsScreen_"/>
+
+        <activity android:name=".HighlightsScreen_" />
         <activity android:name=".MainActivity15_" />
         <activity android:name=".MainActivity14_" />
         <activity android:name=".MainActivity13_" />

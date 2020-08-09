@@ -2,8 +2,7 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -19,16 +18,16 @@ import org.androidannotations.annotations.ViewById;
 
 import io.realm.Realm;
 
-@EActivity(R.layout.activity_main11)
-public class MainActivity11 extends AppCompatActivity {
+@EActivity(R.layout.activity_main16)
+public class MainActivity16 extends AppCompatActivity {
 
     // VARIABLES
-    @ViewById(R.id.logoToHome4)
-    ImageView logoToHome4;
-    @ViewById(R.id.inputSearch)
-    EditText inputSearch;
-    @ViewById(R.id.buttonSearch)
-    Button buttonSearch;
+    @ViewById(R.id.logoToHome10)
+    ImageView logoToHome10;
+    @ViewById(R.id.inputHighlight)
+    EditText inputHighlight;
+    @ViewById(R.id.buttonSearchHighlight)
+    Button buttonSearchHighlight;
     // Realm
     Realm realm;
 
@@ -37,20 +36,21 @@ public class MainActivity11 extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
     }
 
-    @Click(R.id.buttonSearch)
-    public void searchClick(View view){
+    @Click(R.id.buttonSearchHighlight)
+    public void searchHighlightClick(View view){
         // + verify if searchable
-        User result = realm.where(User.class).equalTo("username", inputSearch.getText().toString()).findFirst();
+        User result = realm.where(User.class).equalTo("username", inputHighlight.getText().toString()).findFirst();
         if (result != null) {
             // search results were not null (may nahanap)
-                 // get uuid of searched and init there
-            // save UUID to shared prefs for welcome screen
-            SharedPreferences prefsSearched = getSharedPreferences("myPrefsSearched", MODE_PRIVATE);
-            SharedPreferences.Editor editorSearched = prefsSearched.edit();
-            editorSearched.putString("uuid",result.getUuid());
-            editorSearched.apply();
+            // get uuid of searched and init there
+            // save UUID to shared prefs for highlight result screen
+            SharedPreferences prefsSearchedHighlight = getSharedPreferences("myPrefsSearchedHighlight", MODE_PRIVATE);
+            SharedPreferences.Editor editorSearchedHighlight = prefsSearchedHighlight.edit();
+            editorSearchedHighlight.putString("uuid",result.getUuid());
+            editorSearchedHighlight.apply();
             // go to result
-            MainActivity12_.intent(this).start();
+            Intent intent = new Intent(this, HighlightsScreen_.class);
+            startActivity(intent);
         } else {
             // search results were null (walang nahanap)
             Toast.makeText(getApplicationContext(), "No such user exists", Toast.LENGTH_SHORT).show();
@@ -68,4 +68,5 @@ public class MainActivity11 extends AppCompatActivity {
         finish();
         MainActivity5_.intent(this).start();
     }
+
 }

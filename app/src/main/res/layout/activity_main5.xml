@@ -35,21 +35,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:padding="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
         <TextView
             android:id="@+id/displayUsername"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="6dp"
             android:text="TextView"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/buttonLogout"
-            android:layout_width="6dp"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Logout"
@@ -101,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Highlights" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
