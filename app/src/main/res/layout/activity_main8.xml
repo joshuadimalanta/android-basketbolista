@@ -10,33 +10,38 @@
         android:id="@+id/logoToHome2"
         android:layout_width="189dp"
         android:layout_height="74dp"
-        android:layout_marginTop="60dp"
         android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
         app:srcCompat="@drawable/basketbolista" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
         android:gravity="center"
         android:text="Adjust Stats"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logoToHome2"
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <LinearLayout
+        android:id="@+id/linearLayout13"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26">
+        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintVertical_bias="0.24000001">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -309,11 +314,11 @@
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
 
         <Button
             android:id="@+id/buttonSaveStats"

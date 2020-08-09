@@ -2,6 +2,7 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -107,6 +108,28 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         }
+        User result = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
+        if(result!=null){
+            // username exists (results were not null)
+            // check credentials
+            if(confirmPassword.getText().toString().equals(result.getPassword())){
+                // right credentials
+                // save UUID to shared prefs for welcome screen
+                SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+                SharedPreferences.Editor editorLogin = prefsLogin.edit();
+                editorLogin.putString("uuid",result.getUuid());
+                editorLogin.apply();
+                // start
+                MainActivity9_.intent(this).start();
+            }else{
+                // wrong credentials
+                Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            // username does not exist (results were null)
+            Toast.makeText(getApplicationContext(), "No user found", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Click(R.id.buttonCancel)

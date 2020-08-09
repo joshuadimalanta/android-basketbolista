@@ -64,8 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Name"
             android:inputType="textPersonName"
-            android:text="Name"
             android:textSize="14sp" />
 
         <TextView
@@ -80,8 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Hometown"
             android:inputType="textPersonName"
-            android:text="Hometown"
             android:textSize="14sp" />
 
         <TextView
@@ -96,8 +96,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Team"
             android:inputType="textPersonName"
-            android:text="Team"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -122,8 +122,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number"
-                    android:text="0" />
+                    android:hint="Age"
+                    android:inputType="number" />
 
             </LinearLayout>
 
@@ -144,8 +144,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number|numberDecimal"
-                    android:text="0" />
+                    android:hint="Height"
+                    android:inputType="number|numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -165,8 +165,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="number|numberDecimal"
-                    android:text="0" />
+                    android:hint="Weight"
+                    android:inputType="number|numberDecimal" />
 
             </LinearLayout>
         </LinearLayout>
