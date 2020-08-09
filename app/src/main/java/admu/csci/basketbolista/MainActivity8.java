@@ -166,6 +166,7 @@ public class MainActivity8 extends AppCompatActivity {
             realm.commitTransaction();
             Toast.makeText(getApplicationContext(), "Stats adjusted.", Toast.LENGTH_SHORT).show();
             //closing
+            finish();
             MainActivity7_.intent(this).start();
         }else {
             // may negative value

@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     @Click(R.id.buttonRegister)
+
     public void registerClick(View view){
         if (registerUsername.getText().toString().equals("") || registerPassword.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Fields must not be blank", Toast.LENGTH_SHORT).show();
@@ -99,8 +100,15 @@ public class MainActivity2 extends AppCompatActivity {
                         // erroneous code
                         Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT).show();
                     }
+                    // save UUID to shared prefs for add profile screen
+                    User addProfileUUID = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
+                    SharedPreferences prefsRegProfile = getSharedPreferences("myPrefsRegProfile", MODE_PRIVATE);
+                    SharedPreferences.Editor editorRegProfile = prefsRegProfile.edit();
+                    editorRegProfile.putString("uuid",addProfileUUID.getUuid());
+                    editorRegProfile.apply();
                     //closing
                     finish();
+                    MainActivity15_.intent(this).start();
 
                 } else {
                     // wrong
@@ -108,27 +116,32 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         }
-        User result = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
-        if(result!=null){
-            // username exists (results were not null)
-            // check credentials
-            if(confirmPassword.getText().toString().equals(result.getPassword())){
-                // right credentials
-                // save UUID to shared prefs for welcome screen
-                SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
-                SharedPreferences.Editor editorLogin = prefsLogin.edit();
-                editorLogin.putString("uuid",result.getUuid());
-                editorLogin.apply();
-                // start
-                MainActivity9_.intent(this).start();
-            }else{
-                // wrong credentials
-                Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
-            }
-        }else{
-            // username does not exist (results were null)
-            Toast.makeText(getApplicationContext(), "No user found", Toast.LENGTH_SHORT).show();
-        }
+
+
+
+
+
+//        User result = realm.where(User.class).equalTo("username",registerUsername.getText().toString()).findFirst();
+//        if(result!=null){
+//            // username exists (results were not null)
+//            // check credentials
+//            if(confirmPassword.getText().toString().equals(result.getPassword())){
+//                // right credentials
+//                // save UUID to shared prefs for welcome screen
+//                SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+//                SharedPreferences.Editor editorLogin = prefsLogin.edit();
+//                editorLogin.putString("uuid",result.getUuid());
+//                editorLogin.apply();
+//                // start
+//                MainActivity9_.intent(this).start();
+//            }else{
+//                // wrong credentials
+//                Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
+//            }
+//        }else{
+//            // username does not exist (results were null)
+//            Toast.makeText(getApplicationContext(), "No user found", Toast.LENGTH_SHORT).show();
+//        }
 
     }
 

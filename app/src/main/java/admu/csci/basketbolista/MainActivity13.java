@@ -61,6 +61,7 @@ public class MainActivity13 extends AppCompatActivity {
                 editorSearched.putString("uuid",compared.getUuid());
                 editorSearched.apply();
                 // go to result
+                finish();
                 MainActivity14_.intent(this).start();
             }
         } else {

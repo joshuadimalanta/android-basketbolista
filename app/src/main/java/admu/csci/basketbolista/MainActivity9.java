@@ -156,17 +156,20 @@ public class MainActivity9 extends AppCompatActivity {
             realm.commitTransaction();
             Toast.makeText(getApplicationContext(), "Stats adjusted.", Toast.LENGTH_SHORT).show();
             //closing
+            finish();
             MainActivity6_.intent(this).start();
         }
     }
 
     @Click(R.id.buttonToProfile2)
     public void toProfile2Click(View view){
+        finish();
         MainActivity6_.intent(this).start();
     }
 
     @Click(R.id.logoToHome3)
     public void toHome3Click(View view){
+        finish();
         MainActivity5_.intent(this).start();
     }
 

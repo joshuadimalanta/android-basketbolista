@@ -78,16 +78,19 @@ public class MainActivity7 extends AppCompatActivity {
 
     @Click(R.id.buttonToAdjust)
     public void toAdjustClick(View view){
+        finish();
         MainActivity8_.intent(this).start();
     }
 
     @Click(R.id.buttonToProfile1)
     public void toProfile1Click(View view){
+        finish();
         MainActivity6_.intent(this).start();
     }
 
     @Click(R.id.logoToHome1)
     public void toHome1Click(View view){
+        finish();
         MainActivity5_.intent(this).start();
     }
 

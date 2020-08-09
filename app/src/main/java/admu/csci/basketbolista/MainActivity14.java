@@ -157,6 +157,7 @@ public class MainActivity14 extends AppCompatActivity {
 
     @Click(R.id.logoToHome7)
     public void toHome7Click(View view){
+        finish();
         MainActivity5_.intent(this).start();
     }
 }

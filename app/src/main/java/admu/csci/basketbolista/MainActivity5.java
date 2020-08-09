@@ -2,6 +2,8 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -66,7 +69,32 @@ public class MainActivity5 extends AppCompatActivity {
 
     @Click(R.id.buttonLogout)
     public void logoutClick(View view){
-        MainActivity_.intent(this).start();
+//        MainActivity_.intent(this).start();
+        ///////////////////////CONFIRMATION OF LOGOUT///////////////////////////////////////
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setMessage("Continue logging out?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // YES code
+                        try{
+                            finish();
+                            MainActivity_.intent(MainActivity5.this).start();
+                            Toast.makeText(getApplicationContext(), "See you soon!", Toast.LENGTH_SHORT).show();
+                        }catch(Exception e){
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // NO code
+                        Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        builder.show();
+        //////////////////////////////////////////////////////////////
     }
 
     @Click(R.id.buttonToHighlights)
@@ -75,4 +103,31 @@ public class MainActivity5 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setMessage("Continue logging out?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // YES code
+                        try{
+                            finish();
+                            MainActivity_.intent(MainActivity5.this).start();
+                            Toast.makeText(getApplicationContext(), "See you soon!", Toast.LENGTH_SHORT).show();
+                        }catch(Exception e){
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // NO code
+                        Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        builder.show();
+    }
 }
+

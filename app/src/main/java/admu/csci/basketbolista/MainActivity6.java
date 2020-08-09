@@ -80,16 +80,19 @@ public class MainActivity6 extends AppCompatActivity {
 
     @Click(R.id.buttonToStats)
     public void toStatsClick(View view){
+        finish();
         MainActivity7_.intent(this).start();
     }
 
     @Click(R.id.buttonToEdit)
     public void toEditClick(View view){
+        finish();
         MainActivity9_.intent(this).start();
     }
 
     @Click(R.id.logoToHome)
     public void toHomeClick(View view){
+        finish();
         MainActivity5_.intent(this).start();
     }
 

@@ -72,6 +72,7 @@ public class MainActivity12 extends AppCompatActivity {
 
     @Click(R.id.logoToHome5)
     public void toHome5Click(View view){
+        finish();
         MainActivity5_.intent(this).start();
     }
 
