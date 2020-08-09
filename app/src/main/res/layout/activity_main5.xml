@@ -91,6 +91,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Compare" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <Button
+            android:id="@+id/buttonToHighlights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Highlights" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

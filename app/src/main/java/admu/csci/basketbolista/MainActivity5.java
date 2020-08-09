@@ -2,6 +2,7 @@ package admu.csci.basketbolista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,8 @@ public class MainActivity5 extends AppCompatActivity {
     Button buttonToCompare;
     @ViewById(R.id.buttonLogout)
     Button buttonLogout;
+    @ViewById(R.id.buttonToHighlights)
+    Button buttonHighlight;
     // Realm
     Realm realm;
 
@@ -65,4 +68,11 @@ public class MainActivity5 extends AppCompatActivity {
     public void logoutClick(View view){
         MainActivity_.intent(this).start();
     }
+
+    @Click(R.id.buttonToHighlights)
+    public void highlightClick(View view){
+        Intent intent = new Intent(this, HighlightsScreen_.class);
+        startActivity(intent);
+    }
+
 }

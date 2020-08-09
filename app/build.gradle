@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "admu.csci.basketbolista"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -46,4 +46,7 @@ dependencies {
 
     // Permissions
     implementation 'com.karumi:dexter:6.2.1'
+
+    // YoutubeView
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 }
