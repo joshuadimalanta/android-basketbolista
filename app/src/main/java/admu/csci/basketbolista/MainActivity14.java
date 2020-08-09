@@ -10,10 +10,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import io.realm.Realm;
 
@@ -26,6 +34,8 @@ public class MainActivity14 extends AppCompatActivity {
     @ViewById(R.id.textSummary)
     TextView textSummary;
     // user
+    @ViewById(R.id.myProfilePicture)
+    ImageView myProfilePicture;
     @ViewById(R.id.myName)
     TextView myName;
     @ViewById(R.id.myPoints)
@@ -41,6 +51,8 @@ public class MainActivity14 extends AppCompatActivity {
     @ViewById(R.id.myWins)
     TextView myWins;
     // compared to
+    @ViewById(R.id.comparedProfilePicture)
+    ImageView comparedProfilePicture;
     @ViewById(R.id.comparedName)
     TextView comparedName;
     @ViewById(R.id.comparedPoints)
@@ -153,7 +165,66 @@ public class MainActivity14 extends AppCompatActivity {
 
         // set summary text
         textSummary.setText("You win in a total of "+wincount+" stat categories.");
+
+        // LOAD IMAGE player 1
+        try{
+            File savedImage = saveFile(player1.getProfilepicture());
+            refreshImageView(savedImage);
+        }catch (Exception e){
+            // WALANG IMAGE so default lang
+        }
+
+        // LOAD IMAGE player 2
+        try{
+            File savedImage2 = saveFile2(player2.getProfilepicture());
+            refreshImageView2(savedImage2);
+        }catch (Exception e){
+            // WALANG IMAGE so default lang
+        }
     }
+
+    /////////////////////////////////////////     IMAGES player1      //////////////////////////////////////
+    private File saveFile(byte[] jpeg) throws IOException {
+        // this is the root directory for the images
+        File getImageDir = getExternalCacheDir();
+        // just a sample, normally you have a diff image name each time
+        File savedImage = new File(getImageDir, "savedImage.jpeg");
+        FileOutputStream fos = new FileOutputStream(savedImage);
+        fos.write(jpeg);
+        fos.close();
+        return savedImage;
+    }
+
+    private void refreshImageView(File savedImage) {
+        // this will put the image saved to the file system to the imageview
+        Picasso.get()
+                .load(savedImage)           // where will the photo come from savedImage--from previous method
+                .networkPolicy(NetworkPolicy.NO_CACHE)
+                .memoryPolicy(MemoryPolicy.NO_CACHE)
+                .into(myProfilePicture);           // where will the photo be placed
+    }
+    /////////////////////////////////////////     IMAGES player1      //////////////////////////////////////
+    /////////////////////////////////////////     IMAGES player2      //////////////////////////////////////
+    private File saveFile2(byte[] jpeg) throws IOException {
+        // this is the root directory for the images
+        File getImageDir = getExternalCacheDir();
+        // just a sample, normally you have a diff image name each time
+        File savedImage2 = new File(getImageDir, "savedImage2.jpeg");
+        FileOutputStream fos = new FileOutputStream(savedImage2);
+        fos.write(jpeg);
+        fos.close();
+        return savedImage2;
+    }
+
+    private void refreshImageView2(File savedImage) {
+        // this will put the image saved to the file system to the imageview
+        Picasso.get()
+                .load(savedImage)           // where will the photo come from savedImage--from previous method
+                .networkPolicy(NetworkPolicy.NO_CACHE)
+                .memoryPolicy(MemoryPolicy.NO_CACHE)
+                .into(comparedProfilePicture);           // where will the photo be placed
+    }
+    /////////////////////////////////////////     IMAGES player2      //////////////////////////////////////
 
     @Click(R.id.logoToHome7)
     public void toHome7Click(View view){

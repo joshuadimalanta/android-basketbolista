@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/defaultpicture" />
 
     <TextView
         android:id="@+id/textView41"

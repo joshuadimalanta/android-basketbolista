@@ -135,7 +135,7 @@
                     android:id="@+id/textView68"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Height"
+                    android:text="Height (ft)"
                     android:textSize="12sp" />
 
                 <EditText
@@ -156,7 +156,7 @@
                     android:id="@+id/textView69"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Weight"
+                    android:text="Weight (lbs)"
                     android:textSize="12sp" />
 
                 <EditText
