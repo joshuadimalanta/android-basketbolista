@@ -157,31 +157,29 @@ public class MainActivity9 extends AppCompatActivity {
 
             realm.commitTransaction();
             Toast.makeText(getApplicationContext(), "Profile updated", Toast.LENGTH_SHORT).show();
-        }
 
-
-        // VIDEO
-
-        if (editVideoID.getText().toString().equals("")) {
-            realm.beginTransaction();
-            SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
-            String uuid = prefsLogin.getString("uuid",null);
-            PlayerInfo toEdit = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
-            toEdit.setVideoid("Tn70NxIMk2Q"); //default video if left blank
-            realm.commitTransaction();
-            //closing
-            finish();
-            MainActivity6_.intent(this).start();
-        }else{
-            realm.beginTransaction();
-            SharedPreferences prefsLogin = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
-            String uuid = prefsLogin.getString("uuid",null);
-            PlayerInfo toEdit = realm.where(PlayerInfo.class).equalTo("ownerid",uuid).findFirst();
-            toEdit.setVideoid(editVideoID.getText().toString()); //default video if left blank
-            realm.commitTransaction();
-            //closing
-            finish();
-            MainActivity6_.intent(this).start();
+            // VIDEOID IS OPTIONAL
+            if (editVideoID.getText().toString().equals("")) {
+                realm.beginTransaction();
+                SharedPreferences prefsLogin2 = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+                String uuid2 = prefsLogin2.getString("uuid",null);
+                PlayerInfo toEdit2 = realm.where(PlayerInfo.class).equalTo("ownerid",uuid2).findFirst();
+                toEdit2.setVideoid("Tn70NxIMk2Q"); //default video if left blank
+                realm.commitTransaction();
+                //closing
+                finish();
+                MainActivity6_.intent(this).start();
+            }else{
+                realm.beginTransaction();
+                SharedPreferences prefsLogin2 = getSharedPreferences("myPrefsLogin", MODE_PRIVATE);
+                String uuid2 = prefsLogin2.getString("uuid",null);
+                PlayerInfo toEdit2 = realm.where(PlayerInfo.class).equalTo("ownerid",uuid2).findFirst();
+                toEdit2.setVideoid(editVideoID.getText().toString()); //default video if left blank
+                realm.commitTransaction();
+                //closing
+                finish();
+                MainActivity6_.intent(this).start();
+            }
         }
     }
 
